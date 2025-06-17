@@ -1,0 +1,190 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #ffffff;
+    --background-color: #f4f7f9;
+    --text-color: #333;
+    --input-bg-color: #ffffff;
+    --input-border-color: #ddd;
+    --button-bg-color: #007bff;
+    --button-text-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.controls input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.form-container {
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+#generate-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.main-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.main-buttons button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+}
+
+#reset-btn {
+    background-color: #6c757d;
+}
+
+#add-character-btn {
+    margin-bottom: 20px;
+}
+
+.character-form {
+    border: 1px dashed var(--input-border-color);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.character-form h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--input-border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.output-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.output-column h2 {
+    margin-top: 0;
+}
+
+.output-column textarea {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    box-sizing: border-box;
+    background-color: #e9ecef;
+}
+
+.output-column textarea:read-only {
+    background-color: #e9ecef;
+    cursor: default;
+}
+
+.sub-input-group {
+    margin: 10px 0 10px 15px;
+    padding-left: 15px;
+    border-left: 2px solid #eee;
+}
+
+.sub-input-group label {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #555;
+}
+
+@media (max-width: 800px) {
+    .output-container {
+        grid-template-columns: 1fr;
+    }
+}
